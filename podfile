@@ -1,0 +1,23 @@
+platform:ios,'9.0'
+target 'CGMK' do
+use_frameworks!
+    pod 'SnapKit'
+    pod 'Kingfisher'
+    #banner滚动图片
+    pod 'FSPagerView'
+    pod 'Moya'
+ pod 'HandyJSON', :git => 'https://github.com/alibaba/HandyJSON.git', :branch => 'dev_for_swift5.0'   
+pod 'SwiftyJSON'
+    #刷新
+    pod 'MJRefresh'
+    #消息提示
+    pod 'SwiftMessages'
+    pod 'SVProgressHUD'
+    #播放网络音频
+    pod 'StreamingKit'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+    pod 'RxDataSources'
+    pod 'SDWebImage'
+    pod 'BDToolKit'
+end

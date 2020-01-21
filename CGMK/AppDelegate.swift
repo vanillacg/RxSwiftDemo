@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  CGMK
 //
-//  Created by chenguang on 2019/5/16.
+//  Created by chenguang on 2019/5/10.
 //  Copyright © 2019 chenguang. All rights reserved.
 //
 
@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        let tab = CGTabBarController()
+
+        window?.rootViewController = tab
+        window?.makeKeyAndVisible()
         return true
     }
 

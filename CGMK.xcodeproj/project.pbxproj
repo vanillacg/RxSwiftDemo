@@ -3,25 +3,77 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520BFD0C228E9EFB006F9C49 /* CGMKViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BFD0B228E9EFB006F9C49 /* CGMKViewModel.swift */; };
+		520BFD12228EB37A006F9C49 /* MKHomeRecApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BFD11228EB37A006F9C49 /* MKHomeRecApi.swift */; };
 		52109CA1228D5CED008A93E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CA0228D5CED008A93E4 /* AppDelegate.swift */; };
 		52109CA3228D5CED008A93E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CA2228D5CED008A93E4 /* ViewController.swift */; };
-		52109CA6228D5CED008A93E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52109CA4228D5CED008A93E4 /* Main.storyboard */; };
 		52109CA8228D5CEF008A93E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52109CA7228D5CEF008A93E4 /* Assets.xcassets */; };
 		52109CAB228D5CEF008A93E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52109CA9228D5CEF008A93E4 /* LaunchScreen.storyboard */; };
+		52109CEF228D68F0008A93E4 /* CGNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CD3228D68EF008A93E4 /* CGNoteViewController.swift */; };
+		52109CF0228D68F0008A93E4 /* CGBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CD5228D68EF008A93E4 /* CGBaseViewController.swift */; };
+		52109CF1228D68F0008A93E4 /* CGConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CD6228D68EF008A93E4 /* CGConst.swift */; };
+		52109CF2228D68F0008A93E4 /* CGMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CD8228D68EF008A93E4 /* CGMineViewController.swift */; };
+		52109CF3228D68F0008A93E4 /* CGNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CD9228D68EF008A93E4 /* CGNavigationViewController.swift */; };
+		52109CF4228D68F0008A93E4 /* CGVCContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CDB228D68F0008A93E4 /* CGVCContainer.swift */; };
+		52109CF5228D68F0008A93E4 /* CGVCContainerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CDC228D68F0008A93E4 /* CGVCContainerBar.swift */; };
+		52109CF6228D68F0008A93E4 /* CGViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CDD228D68F0008A93E4 /* CGViewContainer.swift */; };
+		52109CF7228D68F0008A93E4 /* CGHomeBattleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CE0228D68F0008A93E4 /* CGHomeBattleVC.swift */; };
+		52109CF8228D68F0008A93E4 /* CGHomeFreeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CE2228D68F0008A93E4 /* CGHomeFreeVC.swift */; };
+		52109CF9228D68F0008A93E4 /* CGHomeColumnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CE4228D68F0008A93E4 /* CGHomeColumnVC.swift */; };
+		52109CFA228D68F0008A93E4 /* CGHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CE6228D68F0008A93E4 /* CGHomeViewController.swift */; };
+		52109CFB228D68F0008A93E4 /* CGHomeRecommendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CE9228D68F0008A93E4 /* CGHomeRecommendVC.swift */; };
+		52109CFC228D68F0008A93E4 /* CGHomeJobVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CEB228D68F0008A93E4 /* CGHomeJobVC.swift */; };
+		52109CFD228D68F0008A93E4 /* CGTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CEC228D68F0008A93E4 /* CGTabBarController.swift */; };
+		52109CFE228D68F0008A93E4 /* CGAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109CEE228D68F0008A93E4 /* CGAccountViewController.swift */; };
+		52109D01228D7AA2008A93E4 /* MKCourseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109D00228D7AA2008A93E4 /* MKCourseCell.swift */; };
+		52109D05228D818C008A93E4 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52109D04228D818C008A93E4 /* UIColor+Extension.swift */; };
+		52248E5B23B4A97400AC61A5 /* CGDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52248E5A23B4A97400AC61A5 /* CGDetailVC.swift */; };
+		5230FF7423B1FA8F006B3943 /* WebP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5230FF7323B1FA8F006B3943 /* WebP.framework */; };
+		524E08DA23D5643B0017D441 /* MKHomeRecVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E08D923D5643B0017D441 /* MKHomeRecVM.swift */; };
+		525CD303229553A3006C642C /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CD302229553A3006C642C /* NewsModel.swift */; };
+		529BCB4723CF2C0C00062C92 /* CGUIViewController + Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BCB4623CF2C0B00062C92 /* CGUIViewController + Rx.swift */; };
+		A9E0E0FCDACDF9EEAAA89D42 /* Pods_CGMK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF18986683A637D40E064F /* Pods_CGMK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		046689D92CC4B9F02B095E33 /* Pods-CGMK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGMK.release.xcconfig"; path = "Target Support Files/Pods-CGMK/Pods-CGMK.release.xcconfig"; sourceTree = "<group>"; };
+		520BFD0B228E9EFB006F9C49 /* CGMKViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGMKViewModel.swift; sourceTree = "<group>"; };
+		520BFD11228EB37A006F9C49 /* MKHomeRecApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKHomeRecApi.swift; sourceTree = "<group>"; };
 		52109C9D228D5CED008A93E4 /* CGMK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CGMK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52109CA0228D5CED008A93E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52109CA2228D5CED008A93E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		52109CA5228D5CED008A93E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52109CA7228D5CEF008A93E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52109CAA228D5CEF008A93E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52109CAC228D5CEF008A93E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52109CD3228D68EF008A93E4 /* CGNoteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGNoteViewController.swift; sourceTree = "<group>"; };
+		52109CD5228D68EF008A93E4 /* CGBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGBaseViewController.swift; sourceTree = "<group>"; };
+		52109CD6228D68EF008A93E4 /* CGConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGConst.swift; sourceTree = "<group>"; };
+		52109CD8228D68EF008A93E4 /* CGMineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGMineViewController.swift; sourceTree = "<group>"; };
+		52109CD9228D68EF008A93E4 /* CGNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGNavigationViewController.swift; sourceTree = "<group>"; };
+		52109CDB228D68F0008A93E4 /* CGVCContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGVCContainer.swift; sourceTree = "<group>"; };
+		52109CDC228D68F0008A93E4 /* CGVCContainerBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGVCContainerBar.swift; sourceTree = "<group>"; };
+		52109CDD228D68F0008A93E4 /* CGViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGViewContainer.swift; sourceTree = "<group>"; };
+		52109CE0228D68F0008A93E4 /* CGHomeBattleVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGHomeBattleVC.swift; sourceTree = "<group>"; };
+		52109CE2228D68F0008A93E4 /* CGHomeFreeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGHomeFreeVC.swift; sourceTree = "<group>"; };
+		52109CE4228D68F0008A93E4 /* CGHomeColumnVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGHomeColumnVC.swift; sourceTree = "<group>"; };
+		52109CE6228D68F0008A93E4 /* CGHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGHomeViewController.swift; sourceTree = "<group>"; };
+		52109CE9228D68F0008A93E4 /* CGHomeRecommendVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGHomeRecommendVC.swift; sourceTree = "<group>"; };
+		52109CEB228D68F0008A93E4 /* CGHomeJobVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGHomeJobVC.swift; sourceTree = "<group>"; };
+		52109CEC228D68F0008A93E4 /* CGTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGTabBarController.swift; sourceTree = "<group>"; };
+		52109CEE228D68F0008A93E4 /* CGAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGAccountViewController.swift; sourceTree = "<group>"; };
+		52109D00228D7AA2008A93E4 /* MKCourseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKCourseCell.swift; sourceTree = "<group>"; };
+		52109D04228D818C008A93E4 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		52248E5A23B4A97400AC61A5 /* CGDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGDetailVC.swift; sourceTree = "<group>"; };
+		5230FF7323B1FA8F006B3943 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebP.framework; sourceTree = "<group>"; };
+		524E08D923D5643B0017D441 /* MKHomeRecVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKHomeRecVM.swift; sourceTree = "<group>"; };
+		525CD302229553A3006C642C /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		529BCB4623CF2C0B00062C92 /* CGUIViewController + Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGUIViewController + Rx.swift"; sourceTree = "<group>"; };
+		6F3531A5A96ADBCA49A99A1C /* Pods-CGMK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGMK.debug.xcconfig"; path = "Target Support Files/Pods-CGMK/Pods-CGMK.debug.xcconfig"; sourceTree = "<group>"; };
+		9DCF18986683A637D40E064F /* Pods_CGMK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGMK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +81,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5230FF7423B1FA8F006B3943 /* WebP.framework in Frameworks */,
+				A9E0E0FCDACDF9EEAAA89D42 /* Pods_CGMK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F7EB65DB65A856DACCAD067 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F3531A5A96ADBCA49A99A1C /* Pods-CGMK.debug.xcconfig */,
+				046689D92CC4B9F02B095E33 /* Pods-CGMK.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		520BFD0A228E9ED5006F9C49 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				524E08D923D5643B0017D441 /* MKHomeRecVM.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		520BFD0D228E9F0B006F9C49 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				520BFD0B228E9EFB006F9C49 /* CGMKViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		520BFD10228EA1AD006F9C49 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				520BFD11228EB37A006F9C49 /* MKHomeRecApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		52109C94228D5CED008A93E4 = {
 			isa = PBXGroup;
 			children = (
 				52109C9F228D5CED008A93E4 /* CGMK */,
+				5230FF7223B1FA8F006B3943 /* Frameworks */,
 				52109C9E228D5CED008A93E4 /* Products */,
+				3F7EB65DB65A856DACCAD067 /* Pods */,
+				EEB2477B5E4D5FDF19408F6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +144,198 @@
 		52109C9F228D5CED008A93E4 /* CGMK */ = {
 			isa = PBXGroup;
 			children = (
+				52109CED228D68F0008A93E4 /* Account */,
+				52109CD9228D68EF008A93E4 /* CGNavigationViewController.swift */,
+				52109CEC228D68F0008A93E4 /* CGTabBarController.swift */,
+				52109CD4228D68EF008A93E4 /* Common */,
+				52109CDE228D68F0008A93E4 /* Home */,
+				52109CD7228D68EF008A93E4 /* Mine */,
+				52248E5923B4A95A00AC61A5 /* Detail */,
+				52109CD2228D68EF008A93E4 /* Note */,
+				52109CDA228D68EF008A93E4 /* VCContainer */,
 				52109CA0228D5CED008A93E4 /* AppDelegate.swift */,
 				52109CA2228D5CED008A93E4 /* ViewController.swift */,
-				52109CA4228D5CED008A93E4 /* Main.storyboard */,
 				52109CA7228D5CEF008A93E4 /* Assets.xcassets */,
 				52109CA9228D5CEF008A93E4 /* LaunchScreen.storyboard */,
 				52109CAC228D5CEF008A93E4 /* Info.plist */,
 			);
 			path = CGMK;
+			sourceTree = "<group>";
+		};
+		52109CD2228D68EF008A93E4 /* Note */ = {
+			isa = PBXGroup;
+			children = (
+				52109CD3228D68EF008A93E4 /* CGNoteViewController.swift */,
+			);
+			path = Note;
+			sourceTree = "<group>";
+		};
+		52109CD4228D68EF008A93E4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				520BFD0D228E9F0B006F9C49 /* Base */,
+				52109D03228D80DC008A93E4 /* FoundationCategory */,
+				52109D02228D80BF008A93E4 /* UIKitCategory */,
+				52109CD5228D68EF008A93E4 /* CGBaseViewController.swift */,
+				52109CD6228D68EF008A93E4 /* CGConst.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		52109CD7228D68EF008A93E4 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				52109CD8228D68EF008A93E4 /* CGMineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		52109CDA228D68EF008A93E4 /* VCContainer */ = {
+			isa = PBXGroup;
+			children = (
+				52109CDB228D68F0008A93E4 /* CGVCContainer.swift */,
+				52109CDC228D68F0008A93E4 /* CGVCContainerBar.swift */,
+				52109CDD228D68F0008A93E4 /* CGViewContainer.swift */,
+			);
+			path = VCContainer;
+			sourceTree = "<group>";
+		};
+		52109CDE228D68F0008A93E4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				52109CDF228D68F0008A93E4 /* HomeBattle */,
+				52109CE1228D68F0008A93E4 /* HomeFree */,
+				52109CE3228D68F0008A93E4 /* HomeColumn */,
+				52109CE5228D68F0008A93E4 /* VM */,
+				52109CE6228D68F0008A93E4 /* CGHomeViewController.swift */,
+				529BCB4623CF2C0B00062C92 /* CGUIViewController + Rx.swift */,
+				52109CE7228D68F0008A93E4 /* Api */,
+				52109CE8228D68F0008A93E4 /* HomeRec */,
+				52109CEA228D68F0008A93E4 /* HomeJob */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		52109CDF228D68F0008A93E4 /* HomeBattle */ = {
+			isa = PBXGroup;
+			children = (
+				52109CE0228D68F0008A93E4 /* CGHomeBattleVC.swift */,
+			);
+			path = HomeBattle;
+			sourceTree = "<group>";
+		};
+		52109CE1228D68F0008A93E4 /* HomeFree */ = {
+			isa = PBXGroup;
+			children = (
+				52109CE2228D68F0008A93E4 /* CGHomeFreeVC.swift */,
+			);
+			path = HomeFree;
+			sourceTree = "<group>";
+		};
+		52109CE3228D68F0008A93E4 /* HomeColumn */ = {
+			isa = PBXGroup;
+			children = (
+				52109CE4228D68F0008A93E4 /* CGHomeColumnVC.swift */,
+			);
+			path = HomeColumn;
+			sourceTree = "<group>";
+		};
+		52109CE5228D68F0008A93E4 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		52109CE7228D68F0008A93E4 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		52109CE8228D68F0008A93E4 /* HomeRec */ = {
+			isa = PBXGroup;
+			children = (
+				52109CE9228D68F0008A93E4 /* CGHomeRecommendVC.swift */,
+				525CD3012295537D006C642C /* Model */,
+				520BFD10228EA1AD006F9C49 /* Api */,
+				520BFD0A228E9ED5006F9C49 /* VM */,
+				52109CFF228D79F9008A93E4 /* View */,
+			);
+			path = HomeRec;
+			sourceTree = "<group>";
+		};
+		52109CEA228D68F0008A93E4 /* HomeJob */ = {
+			isa = PBXGroup;
+			children = (
+				52109CEB228D68F0008A93E4 /* CGHomeJobVC.swift */,
+			);
+			path = HomeJob;
+			sourceTree = "<group>";
+		};
+		52109CED228D68F0008A93E4 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				52109CEE228D68F0008A93E4 /* CGAccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		52109CFF228D79F9008A93E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				52109D00228D7AA2008A93E4 /* MKCourseCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		52109D02228D80BF008A93E4 /* UIKitCategory */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKitCategory;
+			sourceTree = "<group>";
+		};
+		52109D03228D80DC008A93E4 /* FoundationCategory */ = {
+			isa = PBXGroup;
+			children = (
+				52109D04228D818C008A93E4 /* UIColor+Extension.swift */,
+			);
+			path = FoundationCategory;
+			sourceTree = "<group>";
+		};
+		52248E5923B4A95A00AC61A5 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				52248E5A23B4A97400AC61A5 /* CGDetailVC.swift */,
+			);
+			name = Detail;
+			path = CGMK/Detail;
+			sourceTree = SOURCE_ROOT;
+		};
+		5230FF7223B1FA8F006B3943 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5230FF7323B1FA8F006B3943 /* WebP.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		525CD3012295537D006C642C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				525CD302229553A3006C642C /* NewsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EEB2477B5E4D5FDF19408F6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DCF18986683A637D40E064F /* Pods_CGMK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +345,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52109CAF228D5CEF008A93E4 /* Build configuration list for PBXNativeTarget "CGMK" */;
 			buildPhases = (
+				C1BEDE8F5B3962953E078160 /* [CP] Check Pods Manifest.lock */,
 				52109C99228D5CED008A93E4 /* Sources */,
 				52109C9A228D5CED008A93E4 /* Frameworks */,
 				52109C9B228D5CED008A93E4 /* Resources */,
+				4E1FDA83E06B3D506D2347BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,33 +400,90 @@
 			files = (
 				52109CAB228D5CEF008A93E4 /* LaunchScreen.storyboard in Resources */,
 				52109CA8228D5CEF008A93E4 /* Assets.xcassets in Resources */,
-				52109CA6228D5CED008A93E4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E1FDA83E06B3D506D2347BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CGMK/Pods-CGMK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CGMK/Pods-CGMK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CGMK/Pods-CGMK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1BEDE8F5B3962953E078160 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CGMK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52109C99228D5CED008A93E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				524E08DA23D5643B0017D441 /* MKHomeRecVM.swift in Sources */,
+				529BCB4723CF2C0C00062C92 /* CGUIViewController + Rx.swift in Sources */,
+				525CD303229553A3006C642C /* NewsModel.swift in Sources */,
+				52109CF7228D68F0008A93E4 /* CGHomeBattleVC.swift in Sources */,
+				52109CF6228D68F0008A93E4 /* CGViewContainer.swift in Sources */,
+				52248E5B23B4A97400AC61A5 /* CGDetailVC.swift in Sources */,
 				52109CA3228D5CED008A93E4 /* ViewController.swift in Sources */,
+				52109CFC228D68F0008A93E4 /* CGHomeJobVC.swift in Sources */,
+				52109CF8228D68F0008A93E4 /* CGHomeFreeVC.swift in Sources */,
+				52109CF2228D68F0008A93E4 /* CGMineViewController.swift in Sources */,
+				52109CF3228D68F0008A93E4 /* CGNavigationViewController.swift in Sources */,
+				52109CF5228D68F0008A93E4 /* CGVCContainerBar.swift in Sources */,
+				52109CFB228D68F0008A93E4 /* CGHomeRecommendVC.swift in Sources */,
+				52109CF0228D68F0008A93E4 /* CGBaseViewController.swift in Sources */,
+				52109CF4228D68F0008A93E4 /* CGVCContainer.swift in Sources */,
+				52109CEF228D68F0008A93E4 /* CGNoteViewController.swift in Sources */,
+				520BFD12228EB37A006F9C49 /* MKHomeRecApi.swift in Sources */,
+				52109CF9228D68F0008A93E4 /* CGHomeColumnVC.swift in Sources */,
 				52109CA1228D5CED008A93E4 /* AppDelegate.swift in Sources */,
+				52109CF1228D68F0008A93E4 /* CGConst.swift in Sources */,
+				52109D01228D7AA2008A93E4 /* MKCourseCell.swift in Sources */,
+				52109CFD228D68F0008A93E4 /* CGTabBarController.swift in Sources */,
+				52109CFE228D68F0008A93E4 /* CGAccountViewController.swift in Sources */,
+				52109CFA228D68F0008A93E4 /* CGHomeViewController.swift in Sources */,
+				520BFD0C228E9EFB006F9C49 /* CGMKViewModel.swift in Sources */,
+				52109D05228D818C008A93E4 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		52109CA4228D5CED008A93E4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				52109CA5228D5CED008A93E4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		52109CA9228D5CEF008A93E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -280,9 +613,14 @@
 		};
 		52109CB0228D5CEF008A93E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F3531A5A96ADBCA49A99A1C /* Pods-CGMK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = CGMK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,9 +635,14 @@
 		};
 		52109CB1228D5CEF008A93E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 046689D92CC4B9F02B095E33 /* Pods-CGMK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = CGMK/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

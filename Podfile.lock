@@ -1,0 +1,242 @@
+PODS:
+  - Alamofire (4.8.2)
+  - BDToolKit (2.6.5):
+    - BDToolKit/BDAudioPlayer (= 2.6.5)
+    - BDToolKit/BDButton (= 2.6.5)
+    - BDToolKit/BDCollectionReusableView (= 2.6.5)
+    - BDToolKit/BDCollectionViewCell (= 2.6.5)
+    - BDToolKit/BDCollectionViewController (= 2.6.5)
+    - BDToolKit/BDCollectionViewFlowLayout (= 2.6.5)
+    - BDToolKit/BDCountDownButton (= 2.6.5)
+    - BDToolKit/BDDefine (= 2.6.5)
+    - BDToolKit/BDFreeStyleButton (= 2.6.5)
+    - BDToolKit/BDImageView (= 2.6.5)
+    - BDToolKit/BDLabel (= 2.6.5)
+    - BDToolKit/BDModel (= 2.6.5)
+    - BDToolKit/BDNavigationBar (= 2.6.5)
+    - BDToolKit/BDSegmentView (= 2.6.5)
+    - BDToolKit/BDStackView (= 2.6.5)
+    - BDToolKit/BDTableViewCell (= 2.6.5)
+    - BDToolKit/BDTableViewController (= 2.6.5)
+    - BDToolKit/BDView (= 2.6.5)
+    - BDToolKit/BDViewController (= 2.6.5)
+    - "BDToolKit/NSArray+BDUIKIT (= 2.6.5)"
+    - "BDToolKit/NSBundle+Associated (= 2.6.5)"
+    - "BDToolKit/NSData+DeviceToken (= 2.6.5)"
+    - "BDToolKit/NSData+Encryption (= 2.6.5)"
+    - "BDToolKit/NSData+RandomData (= 2.6.5)"
+    - "BDToolKit/NSDate+BD (= 2.6.5)"
+    - "BDToolKit/NSMutableArray+BDModel (= 2.6.5)"
+    - "BDToolKit/NSMutableDictionary+BD (= 2.6.5)"
+    - "BDToolKit/NSNumber+NumerFormat (= 2.6.5)"
+    - "BDToolKit/NSObject+Archive (= 2.6.5)"
+    - "BDToolKit/NSObject+BD (= 2.6.5)"
+    - "BDToolKit/NSObject+Identifier (= 2.6.5)"
+    - "BDToolKit/NSObject+Ivar (= 2.6.5)"
+    - "BDToolKit/NSObject+NSCoding (= 2.6.5)"
+    - "BDToolKit/NSString+BD (= 2.6.5)"
+    - "BDToolKit/NSString+Encryption (= 2.6.5)"
+    - "BDToolKit/NSString+PercentEncoding (= 2.6.5)"
+    - "BDToolKit/NSString+RandomKey (= 2.6.5)"
+    - "BDToolKit/NSURLComponents+Pairs (= 2.6.5)"
+    - "BDToolKit/NSURLProtocol+WKWebVIew (= 2.6.5)"
+    - "BDToolKit/UIButton+BD (= 2.6.5)"
+    - "BDToolKit/UIButton+Layout (= 2.6.5)"
+    - "BDToolKit/UICollectionViewController+BD (= 2.6.5)"
+    - "BDToolKit/UILabel+BD (= 2.6.5)"
+    - "BDToolKit/UILabel+NSNumberFormat (= 2.6.5)"
+    - "BDToolKit/UINavigationController+Pop (= 2.6.5)"
+    - "BDToolKit/UINib+UIView (= 2.6.5)"
+    - "BDToolKit/UIScrollView+AutoAdjustScrollInsets (= 2.6.5)"
+    - "BDToolKit/UITableViewController+BD (= 2.6.5)"
+    - "BDToolKit/UITextField+BD (= 2.6.5)"
+    - "BDToolKit/UITextView+BD (= 2.6.5)"
+    - "BDToolKit/UIView+BD (= 2.6.5)"
+    - "BDToolKit/UIView+BDAnimation (= 2.6.5)"
+    - "BDToolKit/UIView+BDCDS (= 2.6.5)"
+    - "BDToolKit/UIView+BorderLine (= 2.6.5)"
+    - "BDToolKit/UIView+Constraints (= 2.6.5)"
+    - "BDToolKit/UIView+Tap (= 2.6.5)"
+    - "BDToolKit/UIViewController+BD (= 2.6.5)"
+  - BDToolKit/BDAudioPlayer (2.6.5)
+  - BDToolKit/BDButton (2.6.5)
+  - BDToolKit/BDCollectionReusableView (2.6.5):
+    - BDToolKit/BDStackView
+    - BDToolKit/BDView
+  - BDToolKit/BDCollectionViewCell (2.6.5):
+    - BDToolKit/BDStackView
+    - BDToolKit/BDView
+  - BDToolKit/BDCollectionViewController (2.6.5):
+    - BDToolKit/BDStackView
+    - BDToolKit/BDView
+  - BDToolKit/BDCollectionViewFlowLayout (2.6.5)
+  - BDToolKit/BDCountDownButton (2.6.5)
+  - BDToolKit/BDDefine (2.6.5)
+  - BDToolKit/BDFreeStyleButton (2.6.5):
+    - BDToolKit/BDView
+  - BDToolKit/BDImageView (2.6.5)
+  - BDToolKit/BDLabel (2.6.5)
+  - BDToolKit/BDModel (2.6.5)
+  - BDToolKit/BDNavigationBar (2.6.5)
+  - BDToolKit/BDSegmentView (2.6.5)
+  - BDToolKit/BDStackView (2.6.5)
+  - BDToolKit/BDTableViewCell (2.6.5):
+    - BDToolKit/BDStackView
+    - BDToolKit/BDView
+  - BDToolKit/BDTableViewController (2.6.5):
+    - BDToolKit/BDStackView
+    - BDToolKit/BDView
+  - BDToolKit/BDView (2.6.5)
+  - BDToolKit/BDViewController (2.6.5):
+    - BDToolKit/BDStackView
+    - BDToolKit/BDView
+  - "BDToolKit/NSArray+BDUIKIT (2.6.5)":
+    - BDToolKit/BDStackView
+    - BDToolKit/BDView
+    - "BDToolKit/NSObject+Identifier"
+  - "BDToolKit/NSBundle+Associated (2.6.5)"
+  - "BDToolKit/NSData+DeviceToken (2.6.5)"
+  - "BDToolKit/NSData+Encryption (2.6.5)"
+  - "BDToolKit/NSData+RandomData (2.6.5)"
+  - "BDToolKit/NSDate+BD (2.6.5)"
+  - "BDToolKit/NSMutableArray+BDModel (2.6.5)":
+    - BDToolKit/BDModel
+  - "BDToolKit/NSMutableDictionary+BD (2.6.5)"
+  - "BDToolKit/NSNumber+NumerFormat (2.6.5)"
+  - "BDToolKit/NSObject+Archive (2.6.5)"
+  - "BDToolKit/NSObject+BD (2.6.5)"
+  - "BDToolKit/NSObject+Identifier (2.6.5)"
+  - "BDToolKit/NSObject+Ivar (2.6.5)"
+  - "BDToolKit/NSObject+NSCoding (2.6.5)"
+  - "BDToolKit/NSString+BD (2.6.5)"
+  - "BDToolKit/NSString+Encryption (2.6.5)":
+    - "BDToolKit/NSData+Encryption"
+  - "BDToolKit/NSString+PercentEncoding (2.6.5)"
+  - "BDToolKit/NSString+RandomKey (2.6.5)":
+    - "BDToolKit/NSString+Encryption"
+  - "BDToolKit/NSURLComponents+Pairs (2.6.5)"
+  - "BDToolKit/NSURLProtocol+WKWebVIew (2.6.5)"
+  - "BDToolKit/UIButton+BD (2.6.5)"
+  - "BDToolKit/UIButton+Layout (2.6.5)"
+  - "BDToolKit/UICollectionViewController+BD (2.6.5)"
+  - "BDToolKit/UILabel+BD (2.6.5)"
+  - "BDToolKit/UILabel+NSNumberFormat (2.6.5)"
+  - "BDToolKit/UINavigationController+Pop (2.6.5)"
+  - "BDToolKit/UINib+UIView (2.6.5)"
+  - "BDToolKit/UIScrollView+AutoAdjustScrollInsets (2.6.5)"
+  - "BDToolKit/UITableViewController+BD (2.6.5)"
+  - "BDToolKit/UITextField+BD (2.6.5)"
+  - "BDToolKit/UITextView+BD (2.6.5)"
+  - "BDToolKit/UIView+BD (2.6.5)"
+  - "BDToolKit/UIView+BDAnimation (2.6.5)"
+  - "BDToolKit/UIView+BDCDS (2.6.5)"
+  - "BDToolKit/UIView+BorderLine (2.6.5)":
+    - "BDToolKit/NSObject+Identifier"
+  - "BDToolKit/UIView+Constraints (2.6.5)"
+  - "BDToolKit/UIView+Tap (2.6.5)"
+  - "BDToolKit/UIViewController+BD (2.6.5)"
+  - Differentiator (4.0.1)
+  - FSPagerView (0.8.2)
+  - HandyJSON (5.0.0-beta.1)
+  - Kingfisher (4.10.1)
+  - MJRefresh (3.2.0)
+  - Moya (13.0.1):
+    - Moya/Core (= 13.0.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Result (4.1.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SDWebImage (5.0.4):
+    - SDWebImage/Core (= 5.0.4)
+  - SDWebImage/Core (5.0.4)
+  - SnapKit (4.2.0)
+  - StreamingKit (0.1.30)
+  - SVProgressHUD (2.2.5)
+  - SwiftMessages (7.0.0):
+    - SwiftMessages/App (= 7.0.0)
+  - SwiftMessages/App (7.0.0)
+  - SwiftyJSON (5.0.0)
+
+DEPENDENCIES:
+  - BDToolKit
+  - FSPagerView
+  - HandyJSON (from `https://github.com/alibaba/HandyJSON.git`, branch `dev_for_swift5.0`)
+  - Kingfisher
+  - MJRefresh
+  - Moya
+  - RxCocoa
+  - RxDataSources
+  - RxSwift
+  - SDWebImage
+  - SnapKit
+  - StreamingKit
+  - SVProgressHUD
+  - SwiftMessages
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - Differentiator
+    - FSPagerView
+    - Kingfisher
+    - MJRefresh
+    - Moya
+    - Result
+    - RxCocoa
+    - RxDataSources
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+    - SnapKit
+    - StreamingKit
+    - SVProgressHUD
+    - SwiftMessages
+    - SwiftyJSON
+  trunk:
+    - BDToolKit
+
+EXTERNAL SOURCES:
+  HandyJSON:
+    :branch: dev_for_swift5.0
+    :git: https://github.com/alibaba/HandyJSON.git
+
+CHECKOUT OPTIONS:
+  HandyJSON:
+    :commit: a2ba4e537711ae1fcd9183679c4db878eb171a78
+    :git: https://github.com/alibaba/HandyJSON.git
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  BDToolKit: 1c48d7221343fea2589da3cfd479c7055d5af295
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  FSPagerView: 816a18842306973cc7cc6df8a5332272f7815c30
+  HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SDWebImage: c739016e4bdf0a4a1f9a04b5e0385395ad63a282
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  StreamingKit: 70ca8608c206864b4d54a577eacb3c8bf7c72209
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwiftMessages: a952f7a9103d9aeab93730a2861d2d8fcdd8758f
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+
+PODFILE CHECKSUM: 85b58cd23cc199c86b8a104a0b8bc361604e6c41
+
+COCOAPODS: 1.9.0.beta.2
