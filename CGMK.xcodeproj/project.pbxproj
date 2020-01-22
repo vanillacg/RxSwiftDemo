@@ -37,6 +37,7 @@
 		525CD303229553A3006C642C /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CD302229553A3006C642C /* NewsModel.swift */; };
 		529BCB4723CF2C0C00062C92 /* CGUIViewController + Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529BCB4623CF2C0B00062C92 /* CGUIViewController + Rx.swift */; };
 		A9E0E0FCDACDF9EEAAA89D42 /* Pods_CGMK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF18986683A637D40E064F /* Pods_CGMK.framework */; };
+		C243BEFB80DE3540A3B692FD /* Pods_CGMK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD765F674A80D85CA0D62D /* Pods_CGMK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		525CD302229553A3006C642C /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
 		529BCB4623CF2C0B00062C92 /* CGUIViewController + Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGUIViewController + Rx.swift"; sourceTree = "<group>"; };
 		6F3531A5A96ADBCA49A99A1C /* Pods-CGMK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGMK.debug.xcconfig"; path = "Target Support Files/Pods-CGMK/Pods-CGMK.debug.xcconfig"; sourceTree = "<group>"; };
+		95AD765F674A80D85CA0D62D /* Pods_CGMK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGMK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCF18986683A637D40E064F /* Pods_CGMK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGMK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 			files = (
 				5230FF7423B1FA8F006B3943 /* WebP.framework in Frameworks */,
 				A9E0E0FCDACDF9EEAAA89D42 /* Pods_CGMK.framework in Frameworks */,
+				C243BEFB80DE3540A3B692FD /* Pods_CGMK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +321,7 @@
 			isa = PBXGroup;
 			children = (
 				5230FF7323B1FA8F006B3943 /* WebP.framework */,
+				95AD765F674A80D85CA0D62D /* Pods_CGMK.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";

@@ -11,13 +11,12 @@ pod 'SwiftyJSON'
     #刷新
     pod 'MJRefresh'
     #消息提示
-    pod 'SwiftMessages'
     pod 'SVProgressHUD'
     #播放网络音频
     pod 'StreamingKit'
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'RxDataSources'
+    pod 'ObjectMapper'
     pod 'SDWebImage'
-    pod 'BDToolKit'
 end

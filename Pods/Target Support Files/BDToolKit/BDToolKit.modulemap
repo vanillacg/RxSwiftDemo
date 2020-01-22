@@ -1,6 +1,0 @@
-framework module BDToolKit {
-  umbrella header "BDToolKit-umbrella.h"
-
-  export *
-  module * { export * }
-}
