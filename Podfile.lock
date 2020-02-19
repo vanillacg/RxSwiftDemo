@@ -9,6 +9,15 @@ PODS:
   - MJRefresh (3.3.1)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
+  - Moya-ObjectMapper (2.9):
+    - Moya-ObjectMapper/Core (= 2.9)
+  - Moya-ObjectMapper/Core (2.9):
+    - Moya (~> 14.0.0-beta.6)
+    - ObjectMapper
+  - Moya-ObjectMapper/RxSwift (2.9):
+    - Moya-ObjectMapper/Core
+    - Moya/RxSwift
+    - RxSwift
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Moya/RxSwift (14.0.0):
@@ -39,6 +48,8 @@ DEPENDENCIES:
   - Kingfisher
   - MJRefresh
   - Moya (~> 14.0)
+  - Moya-ObjectMapper
+  - Moya-ObjectMapper/RxSwift
   - Moya/RxSwift (~> 14.0)
   - ObjectMapper
   - RxCocoa
@@ -58,6 +69,7 @@ SPEC REPOS:
     - Kingfisher
     - MJRefresh
     - Moya
+    - Moya-ObjectMapper
     - ObjectMapper
     - RxCocoa
     - RxDataSources
@@ -87,6 +99,7 @@ SPEC CHECKSUMS:
   Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Moya-ObjectMapper: 967a99d9ea3aa9c93ddbe112aeca3667f53bfe93
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
@@ -98,6 +111,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 4ff606d997ec4a348c053ba3d54bb717efbc2566
+PODFILE CHECKSUM: 41047f12af8537bbbd837cfb03677601211eff70
 
 COCOAPODS: 1.9.0.beta.2

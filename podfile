@@ -3,22 +3,20 @@ target 'CGMK' do
 use_frameworks!
     pod 'SnapKit'
     pod 'Kingfisher'
-    #banner滚动图片
     pod 'FSPagerView'
     pod 'Moya', '~> 14.0'
     pod 'Moya/RxSwift', '~> 14.0'
 #    pod 'Moya/ReactiveSwift', '~> 14.0'
  pod 'HandyJSON', :git => 'https://github.com/alibaba/HandyJSON.git', :branch => 'dev_for_swift5.0'
 pod 'SwiftyJSON'
-    #刷新
     pod 'MJRefresh'
-    #消息提示
     pod 'SVProgressHUD'
-    #播放网络音频
     pod 'StreamingKit'
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'RxDataSources'
     pod 'ObjectMapper'
     pod 'SDWebImage'
+    pod 'Moya-ObjectMapper'
+    pod 'Moya-ObjectMapper/RxSwift'
 end
