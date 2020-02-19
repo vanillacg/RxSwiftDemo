@@ -10,6 +10,8 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import SwiftyJSON
+import Moya
 
 struct MySection {
     var header: String
@@ -62,15 +64,17 @@ struct TableViewModel {
     }
 }
 
-class CGHomeJobVC: UIViewController {
+class CGHomeJobVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
        let disposeBag = DisposeBag()
     
     var dataSource: RxTableViewSectionedReloadDataSource<SectionModel<String, [String : Any]>>?
     
        private lazy var tableView: UITableView = {
            let tableView = UITableView.init(frame: CGRect(x: 0.0, y:100.0, width: CGScreenWidth, height: CGScreenHeight - CGNavigatorHeight), style: .plain)
-           tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+           tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SwiftCell")
            tableView.showsVerticalScrollIndicator = true
+        tableView.delegate = self
+        tableView.dataSource = self
            return tableView
        }()
     
@@ -110,6 +114,8 @@ class CGHomeJobVC: UIViewController {
         return s
         }()
     let initialVM = TableViewModel()
+    
+    var channels:Array<JSON> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -158,21 +164,90 @@ class CGHomeJobVC: UIViewController {
         
 //        self.dataSource = dataSource
         //获取列表数据
-        let data = URLSession.shared.rx.json(request: request)
-            .mapObject(type: Douban.self)
-            .map { (d) -> [Channel] in
-                d.channels ?? []
-        }
-        data.bind(to: tableView.rx.items) { (tableView, row, element) in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-            cell.textLabel?.text = "\(row)：\(element.name!)"
-            return cell
-        }.disposed(by: disposeBag)
+//        let data = URLSession.shared.rx.json(request: request)
+//            .mapObject(type: Douban.self)
+//            .map { (d) -> [Channel] in
+//                d.channels ?? []
+//        }
+//        data.bind(to: tableView.rx.items) { (tableView, row, element) in
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+//            cell.textLabel?.text = "\(row)：\(element.name!)"
+//            return cell
+//        }.disposed(by: disposeBag)
         
 //        tableView.rx.setDelegate(self).disposed(by: disposeBag)
-
-        
+//        DouBanProvider
+        DouBanProvider.request(.channels) { result in
+            switch result {
+            case .success(let response):
+                let data = try? response.mapJSON()
+                let json = JSON(data!)
+                self.channels = json["channels"].arrayValue
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                break
+            case .failure(_): break
+            }
+//            if case let .success(response) = result {
+//                let data = try? response.mapJSON()
+//                let json = JSON(data!)
+//                self.channels = json["channels"].arrayValue
+//                DispatchQueue.main.async {
+//                    self.tableView.reloadData()
+//                }
+//            }
+        }
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.channels.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let identify: String = "SwiftCell"
+        let cell = tableView.dequeueReusableCell(withIdentifier: identify, for: indexPath)
+        cell.accessoryType = .disclosureIndicator
+        
+        cell.textLabel?.text = self.channels[indexPath.row]["name"].stringValue
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let channelName = channels[indexPath.row]["name"].stringValue
+        let channelId = channels[indexPath.row]["channel_id"].stringValue
+        DouBanProvider.request(.playlist(channelId)) { result in
+            if case let .success(response) = result {
+                let data = try?response.mapJSON()
+                let json = JSON(data!)
+                let music  = json["song"].arrayValue[0]
+                let artist = music["artist"].stringValue
+                let title = music["title"].stringValue
+                let message = "歌手:\(artist)\n歌曲:\(title)"
+                //将歌曲信息弹出显示
+                self.showAlert(title: channelName, message: message)
+            }
+            
+            if case let .failure(error) = result {
+                //将歌曲信息弹出显示
+                self.showAlert(title: "出错", message: error.errorDescription ?? "xxx")
+            }
+        }
+    }
+    
+    //显示消息
+    func showAlert(title:String, message:String){
+        let alertController = UIAlertController(title: title,
+                                                message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: true)

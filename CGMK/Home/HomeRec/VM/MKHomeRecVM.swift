@@ -12,7 +12,7 @@ import HandyJSON
 import Alamofire
 import RxSwift
 import RxDataSources
-
+import RxCocoa
 /// 新闻标题的分类
 enum NewsTitleCategory: String, HandyJSONEnum {
     /// 推荐
@@ -152,42 +152,76 @@ enum NewsTitleCategory: String, HandyJSONEnum {
 class MKHomeRecVM: CGMKViewModel {
     var category: NewsTitleCategory?
     var ttFrom:TTFrom?
+//    let tableData = Driver<[String]>()
+    
+    
     let newsSection = Variable<[SectionModel<String, NewsContentItem>]>([])
     
     override func loadData() {
-        let pullTime = Date().timeIntervalSince1970
-        let url = BASE_URL + "/api/news/feed/v75/?"
-        let params = [
-                        "device_id": device_id,
-                        "count": 20,
-                        "list_count": 15,
-                        "category": "",
-                        "min_behot_time": pullTime,
-                        "strict": 0,
-                        "detail": 1,
-                        "refresh_reason": 1,
-                        "tt_from": ttFrom ?? "pull",
-                        "iid": iid
-                        ] as [String: Any]
+//        DouBanProvider.request(.channels) { [weak self] result in
+//            switch result {
+//                case .success(let response):
+//                let data = try? response.mapJSON()
+//                let json = JSON(data!)
+//                guard let model = NewsModel.deserialize(from: json.dictionaryObject) else { return }
+//
+//                let itemList = model.data.compactMap({ x -> NewsContentItem? in
+//                    NewsContentItem.deserialize(from: x.content)
+//                })
+//                self?.newsSection.value = [SectionModel(model: "xxxx", items: itemList)]
+//                print(json)
+//                break
+//            case .failure(_):
+//                break
+//            }
+//        }
+//        MKHomeRecApiProvider.request(.recommendFeed) {
+//            [weak self] result in
+//            switch result {
+//                case .success(let response):
+//                let data = try? response.mapJSON()
+//                let json = JSON(data!)
+//                guard let model = NewsModel.deserialize(from: json.dictionaryObject) else { return }
+//
+//                let itemList = model.data.compactMap({ x -> NewsContentItem? in
+//                    NewsContentItem.deserialize(from: x.content)
+//                })
+//                self?.newsSection.value = [SectionModel(model: "xxxx", items: itemList)]
+//                print(json)
+//                break
+//            case .failure(_):
+//                break
+//            }
+//        }
         
-        Alamofire.request(url, parameters: params).responseJSON{ [weak self] (response) in
-            guard response.result.isSuccess else { return }
-            if let value = response.result.value {
-                let json = JSON(value)
-                guard let model = NewsModel.deserialize(from: json.dictionaryObject) else { return }
-                
-                let itemList = model.data.compactMap({ x -> NewsContentItem? in
-                    NewsContentItem.deserialize(from: x.content)
-                })
-                self?.newsSection.value = [SectionModel(model: "xxxx", items: itemList)]
-                
-            }
-        }
         
-        MKHomeRecApiProvider.request(.homeRecommendList) { result in
-            if case let .success(response) = result {
-                print(response)
-            }
-        }
+//        let pullTime = Date().timeIntervalSince1970
+//        let url = BASE_URL + "/api/news/feed/v75/?"
+//        let params = [
+//                        "device_id": device_id,
+//                        "count": 20,
+//                        "list_count": 15,
+//                        "category": "",
+//                        "min_behot_time": pullTime,
+//                        "strict": 0,
+//                        "detail": 1,
+//                        "refresh_reason": 1,
+//                        "tt_from": ttFrom ?? "pull",
+//                        "iid": iid
+//                        ] as [String: Any]
+//
+//        Alamofire.request(url, parameters: params).responseJSON{ [weak self] (response) in
+//            guard response.result.isSuccess else { return }
+//            if let value = response.result.value {
+//                let json = JSON(value)
+//                guard let model = NewsModel.deserialize(from: json.dictionaryObject) else { return }
+//
+//                let itemList = model.data.compactMap({ x -> NewsContentItem? in
+//                    NewsContentItem.deserialize(from: x.content)
+//                })
+//                self?.newsSection.value = [SectionModel(model: "xxxx", items: itemList)]
+//
+//            }
+//        }
     }
 }

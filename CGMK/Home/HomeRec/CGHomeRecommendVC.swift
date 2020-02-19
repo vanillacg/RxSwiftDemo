@@ -254,10 +254,10 @@ class CGHomeRecommendVC: UIViewController {
 
         super.viewDidLoad()
         view.backgroundColor = UIColor.yellow
-//        view.addSubview(tableView)
-        rxswift()
-//        bindVM()
-//        homeRecVM.loadData()
+        view.addSubview(tableView)
+//        rxswift()
+        bindVM()
+        homeRecVM.loadData()
         kdebug_signpost_end(10, 0, 0, 0, 1);
     }
     override func viewWillAppear(_ animated: Bool) {

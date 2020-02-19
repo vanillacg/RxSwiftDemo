@@ -6,6 +6,7 @@ use_frameworks!
     #banner滚动图片
     pod 'FSPagerView'
     pod 'Moya'
+    pod 'RxMoya'
  pod 'HandyJSON', :git => 'https://github.com/alibaba/HandyJSON.git', :branch => 'dev_for_swift5.0'   
 pod 'SwiftyJSON'
     #刷新
@@ -19,4 +20,5 @@ pod 'SwiftyJSON'
     pod 'RxDataSources'
     pod 'ObjectMapper'
     pod 'SDWebImage'
+   pod 'RxMoya'
 end

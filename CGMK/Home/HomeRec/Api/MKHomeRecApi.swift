@@ -9,16 +9,23 @@
 import Foundation
 import Moya
 
-let MKHomeRecApiProvider = MoyaProvider<MKHomeApi>()
+let MKHomeRecApiProvider = MoyaProvider<MKHomeRecApi>()
 
-public enum MKHomeApi {
+public enum MKHomeRecApi {
+    case recommendFeed
     case homeRecommendList
 }
 
-extension MKHomeApi: TargetType {
+extension MKHomeRecApi: TargetType {
+    public var headers: [String : String]? {
+        return nil
+    }
+    
     //请求地址
     public var baseURL: URL {
         switch self {
+        case .recommendFeed:
+            return URL(string: BASE_URL)!
         case .homeRecommendList:
             return URL(string: BASE_URL)!
         }
@@ -26,28 +33,46 @@ extension MKHomeApi: TargetType {
     
     public var path: String {
         switch self {
-        case .homeRecommendList:
-            return "/article/category/get_subscribed/v1/?"
+            case .recommendFeed:
+                return "/api/news/feed/v75/?"
+            case .homeRecommendList:
+                return "/article/category/get_subscribed/v1/?"
         }
     }
     
-    public var method: Moya.Method {return .get}
+    public var method: Moya.Method {
+        return .get
+    }
     
     public var sampleData: Data {
         return "".data(using: String.Encoding.utf8)!
     }
     
     public var task: Task {
-        let parameters = [
+        switch self {
+        case .recommendFeed:
+            let pullTime = Date().timeIntervalSince1970
+            var ttFrom:TTFrom?
+            let params = [
             "device_id": device_id,
-             "iid": iid] as [String : Any]
-        return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+            "count": 20,
+            "list_count": 15,
+            "category": "",
+            "min_behot_time": pullTime,
+            "strict": 0,
+            "detail": 1,
+            "refresh_reason": 1,
+            "tt_from": "pull",
+            "iid": iid
+            ] as [String: Any]
+            return .requestParameters(parameters: params, encoding: URLEncoding.default)
+        case .homeRecommendList:
+            let parameters = [
+                "device_id": device_id,
+                "iid": iid] as [String : Any]
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
+        }
     }
-    
-    public var headers: [String : String]? {
-        return nil
-    }
-    
 }
 
 
