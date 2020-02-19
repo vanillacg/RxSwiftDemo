@@ -1,17 +1,20 @@
 PODS:
-  - Alamofire (4.9.1)
+  - Alamofire (5.0.0)
   - Differentiator (4.0.1)
   - FSPagerView (0.8.3)
   - HandyJSON (5.0.0-beta.1)
-  - Kingfisher (4.10.1)
+  - Kingfisher (5.13.1):
+    - Kingfisher/Core (= 5.13.1)
+  - Kingfisher/Core (5.13.1)
   - MJRefresh (3.3.1)
-  - Moya (13.0.1):
-    - Moya/Core (= 13.0.1)
-  - Moya/Core (13.0.1):
-    - Alamofire (~> 4.1)
-    - Result (~> 4.1)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
   - ObjectMapper (3.5.1)
-  - Result (4.1.0)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -22,10 +25,10 @@ PODS:
   - RxRelay (5.0.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
-  - SDWebImage (5.5.1):
-    - SDWebImage/Core (= 5.5.1)
-  - SDWebImage/Core (5.5.1)
-  - SnapKit (4.2.0)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
+  - SnapKit (5.0.1)
   - StreamingKit (0.1.30)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (5.0.0)
@@ -35,7 +38,8 @@ DEPENDENCIES:
   - HandyJSON (from `https://github.com/alibaba/HandyJSON.git`, branch `dev_for_swift5.0`)
   - Kingfisher
   - MJRefresh
-  - Moya
+  - Moya (~> 14.0)
+  - Moya/RxSwift (~> 14.0)
   - ObjectMapper
   - RxCocoa
   - RxDataSources
@@ -55,7 +59,6 @@ SPEC REPOS:
     - MJRefresh
     - Moya
     - ObjectMapper
-    - Result
     - RxCocoa
     - RxDataSources
     - RxRelay
@@ -77,25 +80,24 @@ CHECKOUT OPTIONS:
     :git: https://github.com/alibaba/HandyJSON.git
 
 SPEC CHECKSUMS:
-  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Alamofire: 58ff2bfb8daaacaa233d5c36e37b10a5248f59b1
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   HandyJSON: 582477127ab3ab65bd2e471815f1a7b846856978
-  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Kingfisher: f33a848445e33c543620812158dc5d47f6bf90df
   MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
-  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
-  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
-  SDWebImage: 1245d058b7b8f59adef7a6da6bbafd4f1ab67041
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   StreamingKit: 70ca8608c206864b4d54a577eacb3c8bf7c72209
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 2b96166904ae7a426430625dc864de169dd5ca88
+PODFILE CHECKSUM: 4ff606d997ec4a348c053ba3d54bb717efbc2566
 
 COCOAPODS: 1.9.0.beta.2

@@ -1,13 +1,14 @@
-platform:ios,'9.0'
+platform:ios,'10.0'
 target 'CGMK' do
 use_frameworks!
     pod 'SnapKit'
     pod 'Kingfisher'
     #banner滚动图片
     pod 'FSPagerView'
-    pod 'Moya'
-    pod 'RxMoya'
- pod 'HandyJSON', :git => 'https://github.com/alibaba/HandyJSON.git', :branch => 'dev_for_swift5.0'   
+    pod 'Moya', '~> 14.0'
+    pod 'Moya/RxSwift', '~> 14.0'
+#    pod 'Moya/ReactiveSwift', '~> 14.0'
+ pod 'HandyJSON', :git => 'https://github.com/alibaba/HandyJSON.git', :branch => 'dev_for_swift5.0'
 pod 'SwiftyJSON'
     #刷新
     pod 'MJRefresh'
@@ -20,5 +21,4 @@ pod 'SwiftyJSON'
     pod 'RxDataSources'
     pod 'ObjectMapper'
     pod 'SDWebImage'
-   pod 'RxMoya'
 end
