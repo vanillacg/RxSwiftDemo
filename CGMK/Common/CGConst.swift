@@ -16,6 +16,7 @@ let CGScreenHeight = UIScreen.main.bounds.height
 //let CG_isIPhone = (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 let CGIsIPhoneX = CGScreenWidth == 812.0
 let CGNavigatorHeight: CGFloat = CGIsIPhoneX ? 88 : 64.0
+let CGToolBarHeight: CGFloat = 49.0
 
 let BASE_URL = "https://is.snssdk.com"
 let device_id: Int = 6096495334

@@ -41,6 +41,8 @@
 		5298526A23FA86D600E0690A /* RxObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298526823FA86D600E0690A /* RxObjectMapper.swift */; };
 		5298526C23FA86E800E0690A /* MJRefresh + Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298526B23FA86E800E0690A /* MJRefresh + Rx.swift */; };
 		5298527A23FBE02700E0690A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298527923FBE02700E0690A /* NetworkService.swift */; };
+		529852F423FD202600E0690A /* JobNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529852F323FD202600E0690A /* JobNetworkService.swift */; };
+		529852F623FD244C00E0690A /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529852F523FD244C00E0690A /* JobViewModel.swift */; };
 		A9E0E0FCDACDF9EEAAA89D42 /* Pods_CGMK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF18986683A637D40E064F /* Pods_CGMK.framework */; };
 		C243BEFB80DE3540A3B692FD /* Pods_CGMK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD765F674A80D85CA0D62D /* Pods_CGMK.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,8 @@
 		5298526823FA86D600E0690A /* RxObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxObjectMapper.swift; sourceTree = "<group>"; };
 		5298526B23FA86E800E0690A /* MJRefresh + Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MJRefresh + Rx.swift"; sourceTree = "<group>"; };
 		5298527923FBE02700E0690A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		529852F323FD202600E0690A /* JobNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobNetworkService.swift; sourceTree = "<group>"; };
+		529852F523FD244C00E0690A /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
 		6F3531A5A96ADBCA49A99A1C /* Pods-CGMK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGMK.debug.xcconfig"; path = "Target Support Files/Pods-CGMK/Pods-CGMK.debug.xcconfig"; sourceTree = "<group>"; };
 		95AD765F674A80D85CA0D62D /* Pods_CGMK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGMK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCF18986683A637D40E064F /* Pods_CGMK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGMK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +287,7 @@
 		52109CEA228D68F0008A93E4 /* HomeJob */ = {
 			isa = PBXGroup;
 			children = (
+				529852F223FD201100E0690A /* Service */,
 				524E08E123D840780017D441 /* API */,
 				524E08DC23D824B70017D441 /* Model */,
 				524E08DB23D824B60017D441 /* VM */,
@@ -343,6 +348,7 @@
 		524E08DB23D824B60017D441 /* VM */ = {
 			isa = PBXGroup;
 			children = (
+				529852F523FD244C00E0690A /* JobViewModel.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -379,6 +385,14 @@
 				5298526B23FA86E800E0690A /* MJRefresh + Rx.swift */,
 			);
 			path = RxExtension;
+			sourceTree = "<group>";
+		};
+		529852F223FD201100E0690A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				529852F323FD202600E0690A /* JobNetworkService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		EEB2477B5E4D5FDF19408F6E /* Frameworks */ = {
@@ -511,6 +525,7 @@
 				52109CF6228D68F0008A93E4 /* CGViewContainer.swift in Sources */,
 				52248E5B23B4A97400AC61A5 /* CGDetailVC.swift in Sources */,
 				52109CA3228D5CED008A93E4 /* ViewController.swift in Sources */,
+				529852F423FD202600E0690A /* JobNetworkService.swift in Sources */,
 				52109CFC228D68F0008A93E4 /* CGHomeJobVC.swift in Sources */,
 				52109CF8228D68F0008A93E4 /* CGHomeFreeVC.swift in Sources */,
 				5298526C23FA86E800E0690A /* MJRefresh + Rx.swift in Sources */,
@@ -522,6 +537,7 @@
 				52109CF4228D68F0008A93E4 /* CGVCContainer.swift in Sources */,
 				52109CEF228D68F0008A93E4 /* CGNoteViewController.swift in Sources */,
 				5298526923FA86D600E0690A /* CGUIViewController + Rx.swift in Sources */,
+				529852F623FD244C00E0690A /* JobViewModel.swift in Sources */,
 				520BFD12228EB37A006F9C49 /* MKHomeRecApi.swift in Sources */,
 				52109CF9228D68F0008A93E4 /* CGHomeColumnVC.swift in Sources */,
 				52109CA1228D5CED008A93E4 /* AppDelegate.swift in Sources */,

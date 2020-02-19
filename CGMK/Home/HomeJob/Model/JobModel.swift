@@ -9,21 +9,18 @@
 import Foundation
 import ObjectMapper
 
-class Channel: Mappable {
+struct Channel: Mappable {
     var name: String?
     var nameEn: String?
     var channelId: String?
     var seqId: Int?
     var abbrEn: String?
-    
-    init() {
-        
-    }
-    required init?(map: Map) {
+
+    init?(map: Map) {
     }
     
-    func mapping(map: Map) {
-            name <- map["name"]
+    mutating func mapping(map: Map) {
+        name <- map["name"]
         nameEn <- map["name_en"]
         channelId <- map["channel_id"]
         seqId <- map["seqId_id"]
@@ -31,17 +28,41 @@ class Channel: Mappable {
     }
 }
 
-class Douban: Mappable {
+struct Douban: Mappable {
     var channels: [Channel]?
     
-    init() {
-    }
-    
-    required init?(map: Map) {
+    init?(map: Map) {
         
     }
     
-    func mapping(map: Map) {
+    mutating func mapping(map: Map) {
         channels <- map["channels"]
     }
 }
+
+struct Song: Mappable {
+    var title: String!
+    var artist: String!
+    init?(map: Map) {
+        
+    }
+    mutating func mapping(map: Map) {
+        title <- map["title"]
+        artist <- map["artist"]
+    }
+}
+
+struct Playlist: Mappable {
+    var r: Int!
+    var isShowQuickStart: Int!
+    var song: [Song]!
+    init?(map: Map) {
+        
+    }
+    mutating func mapping(map: Map) {
+        r <- map["r"]
+        isShowQuickStart <- map["is_show_quick_start"]
+        song <- map["song"]
+    }
+}
+

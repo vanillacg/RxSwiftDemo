@@ -12,6 +12,9 @@ import RxCocoa
 import RxDataSources
 import SwiftyJSON
 import Moya
+import ObjectMapper
+import Moya_ObjectMapper
+import MJRefresh
 
 struct MySection {
     var header: String
@@ -71,7 +74,7 @@ class CGHomeJobVC: UIViewController {
     var dataSource: RxTableViewSectionedReloadDataSource<SectionModel<String, [String : Any]>>?
     
        private lazy var tableView: UITableView = {
-           let tableView = UITableView.init(frame: CGRect(x: 0.0, y:100.0, width: CGScreenWidth, height: CGScreenHeight - CGNavigatorHeight), style: .plain)
+        let tableView = UITableView.init(frame: CGRect(x: 0.0, y: 60.0, width: CGScreenWidth, height: CGScreenHeight - CGNavigatorHeight - CGToolBarHeight - 60.0), style: .plain)
            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SwiftCell")
            tableView.showsVerticalScrollIndicator = true
 //        tableView.delegate = self
@@ -110,7 +113,7 @@ class CGHomeJobVC: UIViewController {
            }()
     
     lazy var searchBar : UISearchBar = {
-        let s = UISearchBar.init(frame: CGRect(x: 110.0, y: 0.0, width: 275.0, height: 100.0))
+        let s = UISearchBar.init(frame: CGRect(x: 0, y: 0.0, width: CGScreenWidth, height: 60.0))
         s.placeholder = "search"
         return s
         }()
@@ -122,8 +125,8 @@ class CGHomeJobVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.orange
         view.addSubview(tableView)
-        view.addSubview(btn)
-        view.addSubview(btn2)
+//        view.addSubview(btn)
+//        view.addSubview(btn2)
         view.addSubview(searchBar)
         
 
@@ -217,38 +220,109 @@ class CGHomeJobVC: UIViewController {
 //            }
 //
 //        }
-    let data = DouBanProvider.rx.request(.channels)
-            .mapJSON()
-            .map { data -> [[String: Any]] in
-                if let json = data as? [String: Any], let channels = json["channels"] as? [[String: Any]] {
-                    return channels
-                } else {
-                    return []
-                }
-            }.asObservable()
+        
+        //4.DouBanProvider.rx
+//    let data = DouBanProvider.rx.request(.channels)
+//            .mapJSON()
+//            .map { data -> [[String: Any]] in
+//                if let json = data as? [String: Any], let channels = json["channels"] as? [[String: Any]] {
+//                    return channels
+//                } else {
+//                    return []
+//                }
+//            }.asObservable()
     
     //将数据绑定到表格
-        //将数据绑定到表格
-        data.bind(to: tableView.rx.items) { (tableView, row, element) in
+//        //将数据绑定到表格
+//        data.bind(to: tableView.rx.items) { (tableView, row, element) in
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "SwiftCell")!
+//            cell.textLabel?.text = "\(element["name"]!)"
+//            cell.accessoryType = .disclosureIndicator
+//            return cell
+//            }.disposed(by: disposeBag)
+//
+//        tableView.rx.modelSelected([String: Any].self).map {
+//            $0["channel_id"] as! String
+//        }.flatMap { DouBanProvider.rx.request(.playlist($0))}.mapJSON().subscribe(onNext: { [weak self] data in
+//            if let json  = data as? [String: Any],
+//                let musics = json["song"] as? [[String: Any]] {
+//                let artist = musics[0]["artist"]!
+//                let title = musics[0]["title"]!
+//                let message = "歌手:\(artist)\n歌曲:\(title)"
+//                self?.showAlert(title: "歌曲信息", message: message)
+//            }
+//
+//        })
+//    }
+    //5. moya-objectmap
+//        let data = DouBanProvider.rx.request(.channels)
+//            .mapObject(Douban.self)
+//            .map{ $0.channels ?? []}
+//            .asObservable()
+        
+//        let networkService = JobNetworkService()
+//        let data = networkService.loadChannelsDriver()
+        
+//        data.drive(tableView.rx.items) { (tableView, row, element) in
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "SwiftCell")!
+//            cell.textLabel?.text = "\(element.name!)"
+//            cell.accessoryType = .disclosureIndicator
+//            return cell
+//        }.disposed(by: disposeBag)
+        
+        self.tableView.mj_header = MJRefreshNormalHeader()
+        self.tableView.mj_footer = MJRefreshBackNormalFooter()
+        
+        let viewmodel = JobViewModel(
+            input: (
+                headrRefresh: self.tableView.mj_header!.rx.refreshing.asDriver(),
+                footerRefresh: self.tableView.mj_footer!.rx.refreshing.asDriver()),
+            dependency: (
+                disposeBag: disposeBag,
+                networkService: JobNetworkService()
+            )
+        )
+        
+        viewmodel.tableData.asDriver().drive(tableView.rx.items) { (tableView, row, element) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "SwiftCell")!
-            cell.textLabel?.text = "\(element["name"]!)"
+            cell.textLabel?.text = "\(element.name!)"
             cell.accessoryType = .disclosureIndicator
             return cell
-            }.disposed(by: disposeBag)
+        }.disposed(by: disposeBag)
         
-        tableView.rx.modelSelected([String: Any].self).map {
-            $0["channel_id"] as! String
-        }.flatMap { DouBanProvider.rx.request(.playlist($0))}.mapJSON().subscribe(onNext: { [weak self] data in
-            if let json  = data as? [String: Any],
-                let musics = json["song"] as? [[String: Any]] {
-                let artist = musics[0]["artist"]!
-                let title = musics[0]["title"]!
-                let message = "歌手:\(artist)\n歌曲:\(title)"
-                self?.showAlert(title: "歌曲信息", message: message)
-            }
-            
-        })
-    }
+        //下拉刷新
+        viewmodel.endHeaderRefreshing
+            .drive(self.tableView.mj_header!.rx.endRefreshing)
+            .disposed(by: disposeBag)
+        
+        viewmodel.endFooterRefreshing
+            .drive(self.tableView.mj_footer!.rx.endRefreshing)
+            .disposed(by: disposeBag)
+        
+//        tableView.rx.modelSelected(Channel.self)
+//            .map{ $0.channelId! }
+//            .flatMap{ DouBanProvider.rx.request(.playlist($0)) }
+//            .mapObject(Playlist.self)
+//            .subscribe(onNext: { [weak self] playlist in
+//                if playlist.song.count > 0 {
+//                    let artist = playlist.song[0].artist!
+//                    let title = playlist.song[0].title!
+//                    let message = "歌手:\(artist)\n歌曲:\(title)"
+//                    self?.showAlert(title: "歌曲信息", message: message)
+//                }
+//            }).disposed(by: disposeBag)
+        
+//        tableView.rx.modelSelected(Channel.self)
+//                   .map{ $0.channelId! }
+//                   .flatMap( networkService.loadFirstSong )
+//                   .subscribe(onNext: { [weak self] song in
+////                       if playlist.song.count > 0 {
+//                           let artist = song.artist!
+//                           let title = song.title!
+//                           let message = "歌手:\(artist)\n歌曲:\(title)"
+//                           self?.showAlert(title: "歌曲信息", message: message)
+////                       }
+//                   }).disposed(by: disposeBag)
         
 //    func numberOfSections(in tableView: UITableView) -> Int {
 //        return 1
@@ -287,8 +361,7 @@ class CGHomeJobVC: UIViewController {
 //                self.showAlert(title: "出错", message: error.errorDescription ?? "xxx")
 //            }
 //        }
-//    }
-    
+    }
     //显示消息
     func showAlert(title:String, message:String){
         let alertController = UIAlertController(title: title,
