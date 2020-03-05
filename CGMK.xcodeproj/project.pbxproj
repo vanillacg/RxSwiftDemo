@@ -36,13 +36,17 @@
 		524E08DA23D5643B0017D441 /* MKHomeRecVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E08D923D5643B0017D441 /* MKHomeRecVM.swift */; };
 		524E08DE23D825070017D441 /* JobModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E08DD23D825070017D441 /* JobModel.swift */; };
 		524E08E323D840880017D441 /* JobAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524E08E223D840880017D441 /* JobAPI.swift */; };
+		525083872403C0EA00346088 /* GitHubNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525083862403C0EA00346088 /* GitHubNetworkService.swift */; };
 		525CD303229553A3006C642C /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CD302229553A3006C642C /* NewsModel.swift */; };
+		52896AD32403A0C1007312F5 /* GitHubViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52896AD22403A0C1007312F5 /* GitHubViewModel.swift */; };
 		5298526923FA86D600E0690A /* CGUIViewController + Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298526723FA86D600E0690A /* CGUIViewController + Rx.swift */; };
 		5298526A23FA86D600E0690A /* RxObjectMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298526823FA86D600E0690A /* RxObjectMapper.swift */; };
 		5298526C23FA86E800E0690A /* MJRefresh + Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298526B23FA86E800E0690A /* MJRefresh + Rx.swift */; };
 		5298527A23FBE02700E0690A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298527923FBE02700E0690A /* NetworkService.swift */; };
 		529852F423FD202600E0690A /* JobNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529852F323FD202600E0690A /* JobNetworkService.swift */; };
 		529852F623FD244C00E0690A /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529852F523FD244C00E0690A /* JobViewModel.swift */; };
+		5298532323FE7EDF00E0690A /* GitHubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298532223FE7EDF00E0690A /* GitHubApi.swift */; };
+		5298532823FE885000E0690A /* GitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5298532723FE885000E0690A /* GitHubModel.swift */; };
 		A9E0E0FCDACDF9EEAAA89D42 /* Pods_CGMK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DCF18986683A637D40E064F /* Pods_CGMK.framework */; };
 		C243BEFB80DE3540A3B692FD /* Pods_CGMK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95AD765F674A80D85CA0D62D /* Pods_CGMK.framework */; };
 /* End PBXBuildFile section */
@@ -80,13 +84,17 @@
 		524E08D923D5643B0017D441 /* MKHomeRecVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKHomeRecVM.swift; sourceTree = "<group>"; };
 		524E08DD23D825070017D441 /* JobModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobModel.swift; sourceTree = "<group>"; };
 		524E08E223D840880017D441 /* JobAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobAPI.swift; sourceTree = "<group>"; };
+		525083862403C0EA00346088 /* GitHubNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubNetworkService.swift; sourceTree = "<group>"; };
 		525CD302229553A3006C642C /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		52896AD22403A0C1007312F5 /* GitHubViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubViewModel.swift; sourceTree = "<group>"; };
 		5298526723FA86D600E0690A /* CGUIViewController + Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGUIViewController + Rx.swift"; sourceTree = "<group>"; };
 		5298526823FA86D600E0690A /* RxObjectMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxObjectMapper.swift; sourceTree = "<group>"; };
 		5298526B23FA86E800E0690A /* MJRefresh + Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MJRefresh + Rx.swift"; sourceTree = "<group>"; };
 		5298527923FBE02700E0690A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		529852F323FD202600E0690A /* JobNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobNetworkService.swift; sourceTree = "<group>"; };
 		529852F523FD244C00E0690A /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
+		5298532223FE7EDF00E0690A /* GitHubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApi.swift; sourceTree = "<group>"; };
+		5298532723FE885000E0690A /* GitHubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubModel.swift; sourceTree = "<group>"; };
 		6F3531A5A96ADBCA49A99A1C /* Pods-CGMK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CGMK.debug.xcconfig"; path = "Target Support Files/Pods-CGMK/Pods-CGMK.debug.xcconfig"; sourceTree = "<group>"; };
 		95AD765F674A80D85CA0D62D /* Pods_CGMK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGMK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DCF18986683A637D40E064F /* Pods_CGMK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CGMK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +246,10 @@
 			isa = PBXGroup;
 			children = (
 				52109CE0228D68F0008A93E4 /* CGHomeBattleVC.swift */,
+				5298532623FE7F0800E0690A /* Network */,
+				5298532523FE7EFA00E0690A /* ViewModel */,
+				5298532423FE7EED00E0690A /* Model */,
+				5298532123FE7EAE00E0690A /* Api */,
 			);
 			path = HomeBattle;
 			sourceTree = "<group>";
@@ -395,6 +407,38 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		5298532123FE7EAE00E0690A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				5298532223FE7EDF00E0690A /* GitHubApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		5298532423FE7EED00E0690A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5298532723FE885000E0690A /* GitHubModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5298532523FE7EFA00E0690A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				52896AD22403A0C1007312F5 /* GitHubViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5298532623FE7F0800E0690A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				525083862403C0EA00346088 /* GitHubNetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		EEB2477B5E4D5FDF19408F6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,8 +572,11 @@
 				529852F423FD202600E0690A /* JobNetworkService.swift in Sources */,
 				52109CFC228D68F0008A93E4 /* CGHomeJobVC.swift in Sources */,
 				52109CF8228D68F0008A93E4 /* CGHomeFreeVC.swift in Sources */,
+				5298532823FE885000E0690A /* GitHubModel.swift in Sources */,
 				5298526C23FA86E800E0690A /* MJRefresh + Rx.swift in Sources */,
 				52109CF2228D68F0008A93E4 /* CGMineViewController.swift in Sources */,
+				5298532323FE7EDF00E0690A /* GitHubApi.swift in Sources */,
+				52896AD32403A0C1007312F5 /* GitHubViewModel.swift in Sources */,
 				52109CF3228D68F0008A93E4 /* CGNavigationViewController.swift in Sources */,
 				52109CF5228D68F0008A93E4 /* CGVCContainerBar.swift in Sources */,
 				52109CFB228D68F0008A93E4 /* CGHomeRecommendVC.swift in Sources */,
@@ -542,6 +589,7 @@
 				52109CF9228D68F0008A93E4 /* CGHomeColumnVC.swift in Sources */,
 				52109CA1228D5CED008A93E4 /* AppDelegate.swift in Sources */,
 				52109CF1228D68F0008A93E4 /* CGConst.swift in Sources */,
+				525083872403C0EA00346088 /* GitHubNetworkService.swift in Sources */,
 				524E08E323D840880017D441 /* JobAPI.swift in Sources */,
 				52109D01228D7AA2008A93E4 /* MKCourseCell.swift in Sources */,
 				52109CFD228D68F0008A93E4 /* CGTabBarController.swift in Sources */,

@@ -299,30 +299,19 @@ class CGHomeJobVC: UIViewController {
             .drive(self.tableView.mj_footer!.rx.endRefreshing)
             .disposed(by: disposeBag)
         
-//        tableView.rx.modelSelected(Channel.self)
-//            .map{ $0.channelId! }
-//            .flatMap{ DouBanProvider.rx.request(.playlist($0)) }
-//            .mapObject(Playlist.self)
-//            .subscribe(onNext: { [weak self] playlist in
-//                if playlist.song.count > 0 {
-//                    let artist = playlist.song[0].artist!
-//                    let title = playlist.song[0].title!
-//                    let message = "歌手:\(artist)\n歌曲:\(title)"
-//                    self?.showAlert(title: "歌曲信息", message: message)
-//                }
-//            }).disposed(by: disposeBag)
         
-//        tableView.rx.modelSelected(Channel.self)
-//                   .map{ $0.channelId! }
-//                   .flatMap( networkService.loadFirstSong )
-//                   .subscribe(onNext: { [weak self] song in
-////                       if playlist.song.count > 0 {
-//                           let artist = song.artist!
-//                           let title = song.title!
-//                           let message = "歌手:\(artist)\n歌曲:\(title)"
-//                           self?.showAlert(title: "歌曲信息", message: message)
-////                       }
-//                   }).disposed(by: disposeBag)
+        tableView.rx.modelSelected(Channel.self)
+            .map({ channel in
+                print(channel)
+                return channel.channelId ?? "0"
+            })
+                   .flatMap( JobNetworkService().loadFirstSong )
+                   .subscribe(onNext: { [weak self] song in
+                           let artist = song.artist!
+                           let title = song.title!
+                           let message = "歌手:\(artist)\n歌曲:\(title)"
+                           self?.showAlert(title: "歌曲信息", message: message)
+                   }).disposed(by: disposeBag)
         
 //    func numberOfSections(in tableView: UITableView) -> Int {
 //        return 1

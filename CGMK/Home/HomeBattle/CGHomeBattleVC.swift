@@ -12,50 +12,73 @@ import RxCocoa
 
 class CGHomeBattleVC: UIViewController {
 
-     let disposeBag = DisposeBag()
-    
+    var disposeBag: DisposeBag = DisposeBag()
+     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView.init(frame: CGRect(x: 0.0, y: 0.0, width: CGScreenWidth, height: CGScreenHeight - CGNavigatorHeight), style: .plain)
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.description())
-        tableView.showsVerticalScrollIndicator = true
-        return tableView
+    let tableView = UITableView.init(frame: CGRect(x: 0.0, y: 40 + 56.0, width: CGScreenWidth, height: CGScreenHeight - CGNavigatorHeight - 40 - 56), style: .plain)
+         tableView.register(MKCourseCell.self, forCellReuseIdentifier: UITableViewCell.description())
+         tableView.rowHeight = UITableView.automaticDimension
+         tableView.estimatedRowHeight = 90
+         tableView.delegate = nil
+         tableView.dataSource = nil
+         tableView.showsVerticalScrollIndicator = true
+         return tableView
+     }()
+    
+    lazy var testLabel : UILabel = {
+     let testLabel = UILabel()
+        testLabel.frame = CGRect(x: 0.0, y: 56.0, width: CGScreenWidth, height: 40)
+        testLabel.backgroundColor = UIColor.red
+        testLabel.textColor = .black
+        return testLabel
+    }()
+     
+    lazy var searchBar : UISearchBar = {
+           let s = UISearchBar.init(frame: CGRect(x: 0, y: 0.0, width: CGScreenWidth, height: 56.0))
+           s.placeholder = "search"
+            
+           return s
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
         view.addSubview(tableView)
+        view.addSubview(searchBar)
+        view.addSubview(testLabel)
         
-        let items = Observable.just(["a", "b", "c"])
+        let searchAction = searchBar.rx.text.orEmpty.asDriver()
+            .throttle(RxTimeInterval.microseconds(500))
+            .distinctUntilChanged()
         
-        items.bind(to: tableView.rx.items) { (tableView, row, element) in
-            let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.description())!
-            cell.textLabel?.text = "\(element) @ row \(row)"
+        let viewModel = GitHubViewModel(searchAction: searchAction)
+        viewModel.navigationTitle.drive(self.testLabel.rx.text).disposed(by: disposeBag)
+
+        viewModel.repositories.drive(tableView.rx.items) { (tableView, row, element) in
+            let cell = UITableViewCell(style: .subtitle, reuseIdentifier: UITableViewCell.description())
+            cell.textLabel?.text = element.name
+            cell.detailTextLabel?.text = element.htmlUrl
             return cell
-        }
-//        .disposed(by: disposeBag)
+        }.disposed(by: disposeBag)
         
-        tableView.rx.itemSelected.subscribe(onNext: { indexPath in
-            let vc = CGDetailVC.init(item: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
-        })
-        
-        tableView.rx.modelSelected(String.self).subscribe(onNext: { item in
-            print("选中的标题:\(item)")
+        tableView.rx.modelSelected(GitHubRepository.self).subscribe(onNext: {[weak self] item in
+            self?.showAlert(title: item.fullName, message: item.descripation)
             }).disposed(by: disposeBag)
         
-        Observable.zip(tableView.rx.itemSelected, tableView.rx.modelSelected(String.self)).subscribe(onNext: { indexPath, model in
-            print(indexPath, model)
-            }).disposed(by: disposeBag)
+//        Observable.zip(tableView.rx.itemSelected, tableView.rx.modelSelected(String.self)).subscribe(onNext: { indexPath, model in
+//            print(indexPath, model)
+//            }).disposed(by: disposeBag)
         
-        Observable.zip(tableView.rx.itemDeselected, tableView.rx.modelDeselected(String.self)).subscribe(onNext: { indexPath, model in
-        print(indexPath, model)
-        }).disposed(by: disposeBag)
         
-        tableView.rx.willDisplayCell.subscribe(onNext: { cell, indexPath in
-        print(cell, indexPath)
-        }).disposed(by: disposeBag)
-        // Do any additional setup after loading the view.
+    }
+    
+    //显示消息
+    func showAlert(title:String, message:String){
+        let alertController = UIAlertController(title: title,
+                                                message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "确定", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
