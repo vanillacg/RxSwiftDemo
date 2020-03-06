@@ -27,7 +27,7 @@ class GitHubViewModel {
     }.flatMapLatest(networkService.searchRepositories)
         
         self.cleanResult = searchAction.filter{ $0.isEmpty }.map{ _ in Void() }
-        self.repositories = Driver.merge(searchResult.map{ $0.items }, cleanResult.map{[]})
+        self.repositories = Driver.merge(searchResult.map{ $0.items }, cleanResult.map{[]}).filter{ x in print(x);  return x.count > 0}
         self.navigationTitle =  Driver.merge(searchResult.map{ "共有\($0.totalCount!)个结果" }, cleanResult.map{"hangge.com"})
     }
 }

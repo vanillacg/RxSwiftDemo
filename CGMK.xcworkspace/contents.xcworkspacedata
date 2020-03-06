@@ -1,6 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <Group
+      location = "group:Guide"
+      name = "RxSwiftGuide">
+      <FileRef
+         location = "group:RxSwift Scheduler.md">
+      </FileRef>
+      <FileRef
+         location = "group:&#x5c1d;&#x8bd5;Swift&#x7406;&#x89e3;&#x6784;&#x9020;&#x8fc7;&#x7a0b;.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift Subjects.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift sendMeesage methodInvoked.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxCocoa UIGestureRecognizer.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift &#x952e;&#x503c;&#x89c2;&#x5bdf;KVO&#x7684;&#x4f7f;&#x7528;.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxCoca UISwitch UISegmentedControl.md">
+      </FileRef>
+      <FileRef
+         location = "group:&#x57fa;&#x672c;&#x8fd0;&#x7b97;&#x7b26;.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxCocoa UIGestureRecognizer (copy).md">
+      </FileRef>
+      <FileRef
+         location = "group:RxCocoa  UIActivityIndicatorView UIApplication.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift Guide.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift &#x53cc;&#x5411;&#x7ed1;&#x5b9a;.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxCocoa UILabel UITextField UITextView.md">
+      </FileRef>
+      <FileRef
+         location = "group:Swift Guide.swift">
+      </FileRef>
+      <FileRef
+         location = "group:Swift &#x95ed;&#x5305;&#x505a;&#x5b8c;&#x51fd;&#x6570;&#x65b9;&#x6cd5;&#x53c2;&#x6570;&#x7b80;&#x5199;.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift Observable.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift Drive.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxCocoa UITableView.md">
+      </FileRef>
+      <FileRef
+         location = "group:&#x51fd;&#x6570;&#x5f0f;&#x7f16;&#x7a0b;&#x521d;&#x63a2; .swift">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift Observable subscribe.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxCocoa UISlider UIStepper.md">
+      </FileRef>
+      <FileRef
+         location = "group:Observable.Swift">
+      </FileRef>
+      <FileRef
+         location = "group:ReactiveX.swift">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift AnyObserver Binder.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxCocoa UIButton UIBarButtonItem.md">
+      </FileRef>
+      <FileRef
+         location = "group:ReactiveX">
+      </FileRef>
+      <FileRef
+         location = "group:RxCocoa URLSession.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift  ControlProperty&#x3001; ControlEvent.md">
+      </FileRef>
+      <FileRef
+         location = "group:RxSwift connect&#x3001;publish&#x3001;replay&#x3001;multicast.md">
+      </FileRef>
+   </Group>
    <FileRef
       location = "group:RxPlayground.playground">
    </FileRef>

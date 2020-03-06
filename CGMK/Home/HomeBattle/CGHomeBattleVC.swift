@@ -39,13 +39,20 @@ class CGHomeBattleVC: UIViewController {
             
            return s
     }()
-    
+    var barImageView:UIView?
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.blue
         view.addSubview(tableView)
         view.addSubview(searchBar)
         view.addSubview(testLabel)
+
+        _ = self.tableView.rx.observe(CGPoint.self, "contentOffset").subscribe(onNext: { [weak self] offset in
+            var delta = offset!.y/CGFloat(40) + 1
+            delta = CGFloat.maximum(delta, 0)
+            print(delta)
+            self?.testLabel.alpha = delta
+        })
         
         let searchAction = searchBar.rx.text.orEmpty.asDriver()
             .throttle(RxTimeInterval.microseconds(500))
